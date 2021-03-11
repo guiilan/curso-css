@@ -48,11 +48,14 @@
         height: 45px;
         display: block;
         background-color: #2CCB69;
+        background-image: url("../images//icon-contact-close.svg");
+        background-repeat: no-repeat;
         position: fixed;
         bottom: 45px;
         right: 45px;
         border-radius: 50%;
         z-index: 200;
+        transition: all 0.2s ease-out;
     }
 }
 
@@ -122,3 +125,39 @@
 @media screen and (min-width: 1600px){
 
 }
+
+
+/* Classes Utilitarias */
+
+.jl-text-green{
+    color: #2CCB69;
+}
+
+.jl-text-dark{
+    color: #4D4C4C;
+}
+
+.jl-text-light{
+    color: #bcbcbc;
+}
+
+.jl-text-black{
+    color: #000;
+}
+
+.jl-bg-green{
+    background-color: #2CCB69;
+}
+
+.jl-bg-dark{
+    background-color: #4D4C4C;
+}
+
+.jl-bg-light{
+    background-color: #bcbcbc;
+}
+
+.jl-bg-black{
+    background-color: #000;
+}
+
