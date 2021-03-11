@@ -11,13 +11,22 @@ p {
 }
 
 @media screen and (min-width: 320px){
-    .jl-page-wrapper{
+    .jl-page-wrapper, .jl-preloader {
         width: 100%;
         height: 100vh;
         display: block;
         background-color: #1C1C1C;
         border: 30px solid black;
     } 
+
+    .jl-preloader { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
 
     .jl-topbar{
         width: 100%;
@@ -61,12 +70,11 @@ p {
         right: 45px;
         border-radius: 50%;
         z-index: 200;
-        transition: all 0.2s ease-out;
+        border: none;
+        cursor: pointer;
     }
 
-    .jl-btn-contact:hover{
-        background-position-y: -45px ;
-    }
+
 
     .jl-contact-info{
         width: 245px;
@@ -76,6 +84,7 @@ p {
         bottom: 115px;
         z-index: 200;
         right: 65px;
+        display: none;
     }
 
     .jl-contact-info-inner{
@@ -239,3 +248,12 @@ p {
     background-color: #000;
 }
 
+/* Classes Comportamentais */
+
+.jl-is-open{
+    display: block;
+}
+
+.jl-change-icon{
+    background-position-y: -45px ;
+}
