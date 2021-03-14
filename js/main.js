@@ -3,10 +3,12 @@ var btnContact = document.querySelector('.jl-btn-contact');
 
 //Page preloader
 window.addEventListener('load', function(){
-    var pagePreloader = document.querySelector(".jl-preloader");
-    setTimeout(function(){
-        pagePreloader.classList.add('jl-fade-out');
-    }, 3000)
+    var pagePreloder = document.querySelector('.jl-preloader');
+    pagePreloder.classList.add('jl-fade-out');
+ 
+    setTimeout(function () {
+        pagePreloder.style.display = 'none';
+    }, 2000);
     
 });
 
