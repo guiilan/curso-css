@@ -6,13 +6,19 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-p {
+p, label {
     font-family: 'Open Sans', sans-serif;
 }
 
 @keyframes fadeOut {
     to {
         opacity: 0;
+    }
+}
+
+@keyframes slideTopIn{
+    to{
+        top: 15%;
     }
 }
 
@@ -90,7 +96,7 @@ p {
     .jl-overlay{
         width: 100%;
         height: 100vh;
-        display: block;
+        display: none;
         position: fixed;
         z-index: 1000;
         top: 0;
@@ -100,21 +106,45 @@ p {
 
     .jl-modal{
         width: 800px;
-        display: table;
+        display: none;
         padding: 30px;
         border-radius: 0 30px 30px 30px;
         position: fixed;
-        top: 15%;
+        top:-100%;
         left: 0;
         right: 0;
         margin: 0 auto;
         z-index: 1200;
     }
 
-    .jl-modal-header {
+    .jl-field, .jl-textarea{
+        width: 100%;
+        background-color: #2F2F2F;
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        text-indent: 15px;
+    }
+
+    .jl-field{
+        height: 45px;
+    }
+
+    .jl-textarea{
+
+    }
+
+    .jl-modal-header, .jl-modal-body, .jl-form {
         width: 100%;
         display: table;
         position: relative;
+    }
+
+    .jl-form label{
+        margin-bottom: 10px ;
+        font-size: 16px;
+        display: inline-block;
     }
 
     .jl-close-modal {
@@ -176,6 +206,11 @@ p {
         z-index: 200;
         border: none;
         cursor: pointer;
+    }
+
+    .jl-btn-block{
+        display: block;
+        width: 100%;
     }
 
 
@@ -524,6 +559,10 @@ p {
 
 .jl-is-open{
     display: block;
+}
+
+.jl-slide-top-in{
+    animation: slideTopIn 0.6s forwards cubic-bezier(0,1.11,.6,.80);
 }
 
 .jl-change-icon{
